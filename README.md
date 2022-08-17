@@ -1,3 +1,3 @@
-# first-repo
+# my-projects
 
 Some description!!!
