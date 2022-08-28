@@ -10,42 +10,304 @@
         <title>SportsBlog | Overview</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-        
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,400i%7CLora:400,400i%7CWork+Sans:400,500,600,700,800,900">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Open+Sans:wght@700&amp;display=swap">
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" rel="stylesheet"  type='text/css'>
+        <style>
+            /* .ico-basketball {
+    background: url(../images/sprite/ico-navbar.svg) no-repeat 0 -90px;
+    width: 30px;
+    height: 30px;
+    margin-right: 24px;
+} */
+            .ico-football{
+                background: url('ico-navbar.svg') no-repeat 0 -2px;
+                width: 30px;
+                height: 30px; 
+            }
+            .ico-basketball{
+                background: url('ico-navbar.svg') no-repeat 0 -65px;
+                width: 30px;
+                height: 30px;
+            }
+            .btn-gs{
+                border: none;
+                border-radius: 40px;
+                padding: 12px 20px;
+                font-weight: 700;
+            }
+            .btn-gs:hover{
+                color: #000;
+            }
+        </style>
     </head>
     <body>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>  
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!-- main div - Holds all components of page -->
         <div class="container" id="main">  
-            <nav class="navbar d-flex navbar-expand-lg justify-content-between">
-                <a class="navbar-brand d-lg-inline-block order-2 order-lg-1" href="https://www.sportsblog.com">
-                    <img src="logo-vector.jpeg" class="width:40px;" alt="brandLogo">
+            <!-- <nav class="navbar d-flex navbar-expand-lg justify-content-between">
+                <a class="navbar-brand d-lg-inline-block order-2 order-lg-1" href="https://www.sportsblog.com/">
+                    <img src="images/logo.png" alt="brandLogo">
                 </a>
-                <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#sportsMenu"></button>
-                <i class="ico-menu"></i>
-                <div class="navbar-collapse justify-content-lg-center" id="sportsMenu">
-                    <ul class="navbar-nav" id="navbar-item-list">
+                <button class="navbar-toggle order-1" type="button" data-bs-toggle="collapse" data-bs-target="#sportsMenu">
+                    <i class="fa-light fa-bars-sort"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-lg-center order-4 order-lg-2 show" id="sportsMenu">
+                    <ul class="navbar-nav" id="sport-menu-list">
                         <li class="nav-item dropdown megamenu-li">
-                            <a class="nav-link dropdown-toggel ml-0" id="NBANavbarDropdown" role="button" href="#" data-toggle="dropdown"></a> 
-                            <i class="fa-thin fa-basketball"></i>
-                            "NBA"
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="NBANavbarDropdown" role="button">
+                                <i class="fa-thin fa-basketball text-bg-success mx-2"></i>
+                                <span class="text-dark">NBA</span>
+                            </a>
+                            <div class="dropdown-menu show">
+                                <div class="container-fluid px-0">
+                                    <div class="row w-100 bg-white rounded-0 m-0 show">
+                                        <div class="col-12">
+                                            <div class="row m-1 mx-0 nav-category-wrap">
+                                                <div class="col-12">
+                                                    <h1 class="show">
+                                                        <a href="/category/nba/" class="dropdown-item">
+                                                            NBA
+                                                        </a>
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                            <div class="row mx-0">
+                                                <div class="col-12 col-lg-3 mb-4">
+                                                    <h4 class="dropdown-headerfont-weight-bold px-0 text-muted text-uppercase">Atlantic</h4>
+                                                    <a href="/team/boston/celtics/">
+                                                        <div>
+
+                                                        </div>
+                                                    </a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
-                        <li class="nav-item dropdown megamenu-li">
-                            <a class="nav-link dropdown-toggel ml-0" id="NFLNvbarDropdown" role="button" href="#"></a>
-                            <i class="fa-thin fa-football"></i>
-                            "NFL"
+                        <li class="nav-item dropdown megamenu-l1">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="NFLNavDropdown" role="button">
+                                <i class="fa-thin fa-football text-bg-success mx-2"></i>
+                                <span class="text-dark">NFL</span>
+                            </a>
+                            <div class="dropdown-menu show">
+                                <div class="container-fluid px=0" >
+                                    <div class="row w-100 bg-white show">
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="show">
+                                                        <a href="/category/nfl/" class="dropdown-item">
+                                                            NFL
+                                                        </a>
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
-                        <li class="nav-item dropdown megamenu-li">
-                            <a class="nav-link dropdown-toggel ml-0" id="NFLNvbarDropdown" role="button" href="#"></a>
-                            <i class="fa-thin fa-football"></i>
-                            "NFL"
+                        <li class="nav-item dropdown megamenu-l1">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="NFLNavDropdown" role="button">
+                                <i class="fa-thin fa-football text-bg-success mx-2"></i>
+                                <span class="text-dark">NHL</span>
+                            </a>
+                            <div class="dropdown-menu show">
+                                <div class="container-fluid px=0" >
+                                    <div class="row w-100 bg-white show">
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="show">
+                                                        <a href="/category/nfl/" class="dropdown-item">
+                                                            NHL
+                                                        </a>
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown megamenu-l1">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="NFLNavDropdown" role="button">
+                                <i class="fa-thin fa-football text-bg-success mx-2"></i>
+                                <span class="text-dark">MLB</span>
+                            </a>
+                            <div class="dropdown-menu show">
+                                <div class="container-fluid px=0" >
+                                    <div class="row w-100 bg-white show">
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="show">
+                                                        <a href="/category/nfl/" class="dropdown-item">
+                                                            MLB
+                                                        </a>
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown megamenu-l1">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="NFLNavDropdown" role="button">
+                                <i class="fa-thin fa-football text-bg-success mx-2"></i>
+                                <span class="text-dark">Soccer</span>
+                            </a>
+                            <div class="dropdown-menu show">
+                                <div class="container-fluid px=0" >
+                                    <div class="row w-100 bg-white show">
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="show">
+                                                        <a href="/category/nfl/" class="dropdown-item">
+                                                            Soccer
+                                                        </a>
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown megamenu-l1">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="NFLNavDropdown" role="button">
+                                <i class="fa-thin fa-football text-bg-success mx-2"></i>
+                                <span class="text-dark">FANTASY</span>
+                            </a>
+                            <div class="dropdown-menu show">
+                                <div class="container-fluid px=0" >
+                                    <div class="row w-100 bg-white show">
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="show">
+                                                        <a href="/category/nfl/" class="dropdown-item">
+                                                            FANTASY
+                                                        </a>
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
-            </nav>
+                <div class="order-3">
+                    <a href="https://www.sportsblog.com/#search" data-bs-toggle="panel" style="text-decoration: none;">
+                        <i class="fa-thin fa-magnifying-glass text-bg-dark m-3"></i>
+                    </a>
+                    <a href="#" role="button" class="btn btn-success rounded-pill px-4 py-2 my-3 ml-3">
+                        <span class="text-uppercase font-weight-bold text-white">Sign In</span>
+                    </a>
+                </div>
+            </nav> -->
+            <!-- <div class="ico-football">
+
+            </div><br>
+            <div class="ico-basketball">
+
+            </div> -->
+            <div class="container-fluid d-flex" style="background-color: rgb(146, 151, 252);">
+                <div class="container">
+                        <div class="row py-4 py-md-5 d-flex">
+                            <div class="d-flex flex-column flex-md-row px-0 col-12 col-md-4">
+                                <div class="col px-3 px-md-5"> 
+                                    <div class="row mx-0">
+                                        <h2 class="text-white text-center">A powerful platform.</h2>
+                                    </div>
+                                    <div class="row mx-0 mt-2">
+                                        <h5 class="text-white text-center font-weight-light">Design, build, and grow your blog. Set up in minutes.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column flex-md-row col-12 col-md-4 px-0">
+                                <div class="d-none d-md-block h-100" style="width: 2px; background-color:darkgray"></div>
+                                <div class="d-block d-md-none w-100 my-3"></div>
+                                <div class="col px-3 px-md-5">
+                                    <div class="row mx-0">
+                                        <h2 class="text-white text-center">Build your fan base.</h2>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <h5 class="text-white text-center">Amplify your voice, build fan engagement!</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column flex-md-row col-12 col-md-4 px-0">
+                                <div class="d-none d-md-block h-100" style="width: 2px; background-color:darkgray"></div>
+                                <div class="d-block d-md-none w-100 my-3"></div>
+                                <div class="col px-3 px-md-5">
+                                    <div class="row mx-0">
+                                        <h2 class="text-white text-center">Earn cash and rewards.</h2>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <h5 class="text-white text-center">Make money doing what you love. Coming soon!</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mx-0 pb-5 justify-content-center">
+                            <!-- <button type="button" class="btn-gs btn btn-warning text-uppercase text-white d-none d-md-block btn-lg">Get Started</button> -->
+                            <div class="col-4"></div>
+                            <div class="col-4 text-center">
+                                <button type="button" class="btn text-uppercase text-white btn-warning">Get Started</button>
+                            </div>
+                            <div class="col-4"></div>
+                        </div>
+                </div>
+            </div>
+            <div class="container-fluid p-4 mb-3 text-center" style="background-color: rgb(130, 136, 252);">
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6 col-sm-12 text-white text-center">
+                        <h3>
+                            "I’ve tried other sports blogging sites but SportsBlog has the most features and the best community I’ve ever experienced."
+                        </h3>
+                        <p class="social-proof-attribution">- Ben Sundock</p>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="container-fluid bg-white p-4 mb-3 text-center">
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6 col-sm-12">
+                        <h3>
+                            Start publishing in minutes with the best platform for creators who want to blog about sports.
+                        </h3>
+                        <button class="btn btn-warning">Start your SportsBlog</button>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div> 
+            </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></script>
     </body>
